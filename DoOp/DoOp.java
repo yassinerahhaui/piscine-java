@@ -2,7 +2,7 @@
 
 public class DoOp {
     public static String operate(String[] args) {
-        if (args.length == 0) {
+        if (args.length != 3) {
             return "Error";
         }
         if (args[2] == "0" && args[1] == "%") {
