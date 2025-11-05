@@ -34,6 +34,6 @@ public class CleanExtract {
             }
         }
 
-        return result.toString();
+        return result.toString().trim();
     }
 }
