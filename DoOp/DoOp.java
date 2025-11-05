@@ -3,7 +3,7 @@
 public class DoOp {
     public static String operate(String[] args) {
         if (args.length == 0) {
-            return "it depend on the input.";
+            return "Error";
         }
         if (args[2] == "0" && args[1] == "%") {
             return "Error";
