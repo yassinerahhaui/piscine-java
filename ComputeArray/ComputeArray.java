@@ -1,4 +1,4 @@
-package ComputeArray;
+// package ComputeArray;
 
 public class ComputeArray {
     public static int[] computeArray(int[] array) {
