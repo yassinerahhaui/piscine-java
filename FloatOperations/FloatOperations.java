@@ -5,6 +5,6 @@ public class FloatOperations {
         return a + b; 
     }
     public static float divideTwoFloats(float a, float b) {
-        return a * b;
+        return a / b;
     }
 }
