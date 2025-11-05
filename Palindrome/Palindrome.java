@@ -10,6 +10,6 @@ public class Palindrome {
             char ch = s.charAt(i);
             reversed.append(ch);
         }
-        return s.equals(reversed.toString());
+        return s.toLowerCase().equals(reversed.toString().toLowerCase());
     }
 }
