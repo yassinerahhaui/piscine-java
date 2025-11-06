@@ -1,5 +1,5 @@
 import java.io.*;
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class FileManager {
     public static void createFile(String fileName, String content) throws IOException {
