@@ -4,16 +4,16 @@ import java.io.*;
 
 public class Cat {
     public static void cat(String[] args) throws IOException {
-        try {
-            FileReader fileData = new FileReader(args[0]);
-            int c;
-            while ((c = fileData.read()) != -1) {
-                System.out.print((char)c);
+        if (args == null || args.length == 0) return;
+        byte[] buffer = new byte[8192];
+        for (String filename : args) {
+            try (FileInputStream fis = new FileInputStream(filename)) {
+                int bytesRead;
+                while ((bytesRead = fis.read(buffer)) != -1) {
+                    System.out.write(buffer, 0, bytesRead);
+                }
             }
-            fileData.close();   
-            
-        } catch (Exception e) {
-            System.out.print(e.toString());
         }
+        System.out.flush();
     }
 }
