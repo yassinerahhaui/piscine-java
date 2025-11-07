@@ -4,6 +4,8 @@ public class CelestialObject {
     public double z = 0.0;
     public String name = "Soleil";
 
+    public CelestialObject() {}
+
     public CelestialObject(double x2,double y2, double z2, String name2) {
         x = x2;
         y = y2;
