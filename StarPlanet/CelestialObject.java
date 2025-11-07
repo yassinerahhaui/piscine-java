@@ -2,22 +2,23 @@
 import java.util.Objects;
 
 public class CelestialObject {
-    public double x ,y , z;
-    public String name;
+    private double x, y, z;
+    private String name = "Soleil";
+    public static final double KM_IN_ONE_AU = 1.5e8;
 
-    public static double KM_IN_ONE_AU = 150000000.0;
+    public CelestialObject() {
+        // default constructor
+    }
 
-    public CelestialObject() { this("Soleil", 0.0, 0.0, 0.0); }
-
-    public CelestialObject(String name, double x,double y, double z) {
+    public CelestialObject(String name, double x, double y, double z) {
+        this.name = name;
         this.x = x;
         this.y = y;
         this.z = z;
-        this.name = name;
     }
 
     public double getX() {
-        return this.x;
+        return x;
     }
 
     public void setX(double x) {
@@ -25,15 +26,15 @@ public class CelestialObject {
     }
 
     public double getY() {
-        return this.y;
+        return y;
     }
 
     public void setY(double y) {
         this.y = y;
-    } 
+    }
 
     public double getZ() {
-        return this.z;
+        return z;
     }
 
     public void setZ(double z) {
@@ -41,36 +42,37 @@ public class CelestialObject {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public static double getDistanceBetween(CelestialObject obj1,CelestialObject obj2) {
-        double dx = obj1.x - obj2.x;
-        double dy = obj1.y - obj2.y;
-        double dz = obj1.z - obj2.z;
-        return Math.sqrt(dx*dx+dy*dy+dz*dz);
+    public static double getDistanceBetween(CelestialObject a, CelestialObject b) {
+        double dx = a.x - b.x, dy = a.y - b.y, dz = a.z - b.z;
+        return Math.sqrt(dx * dx + dy * dy + dz * dz);
     }
 
-    public static double getDistanceBetweenInKm(CelestialObject obj1,CelestialObject obj2) {
-        return getDistanceBetween(obj1,obj2) * KM_IN_ONE_AU;
+    public static double getDistanceBetweenInKm(CelestialObject a, CelestialObject b) {
+        return getDistanceBetween(a, b) * KM_IN_ONE_AU;
     }
 
     public String toString() {
-        return String.format("%s is positioned at (%.3f, %.3f, %.3f)", this.name, this.x, this.y, this.z);
+        return String.format("%s is positioned at (%.3f, %.3f, %.3f)", name, x, y, z);
     }
 
-    
-    public boolean equals(CelestialObject obj) {
-        if (obj == null) 
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (!(o instanceof CelestialObject))
             return false;
-        return this.name == obj.name && this.x == obj.x && this.y == obj.y && this.z == obj.z;
+        CelestialObject c = (CelestialObject) o;
+        return Double.compare(x, c.x) == 0 && Double.compare(y, c.y) == 0 &&
+                Double.compare(z, c.z) == 0 && Objects.equals(name, c.name);
     }
 
     public int hashCode() {
-        return Objects.hash(this.name, this.x, this.y, this.z);
+        return Objects.hash(name, x, y, z);
     }
 }
