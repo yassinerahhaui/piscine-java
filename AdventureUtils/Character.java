@@ -75,17 +75,17 @@ public class Character {
         return first;
     }
 
-    public static void main(String[] args) {
-        System.out.print(Character.printStatus());
+    // public static void main(String[] args) {
+    //     System.out.print(Character.printStatus());
 
-        Character aragorn = new Character("Aragorn", 20);
-        Character uruk = new Character("Uruk", 15);
+    //     Character aragorn = new Character("Aragorn", 20);
+    //     Character uruk = new Character("Uruk", 15);
 
-        System.out.print(Character.printStatus());
+    //     System.out.print(Character.printStatus());
 
-        Character winner = Character.fight(aragorn, uruk);
+    //     Character winner = Character.fight(aragorn, uruk);
 
-        System.out.println(winner.toString());
-        System.out.print(Character.printStatus());
-    }
+    //     System.out.println(winner.toString());
+    //     System.out.print(Character.printStatus());
+    // }
 }
