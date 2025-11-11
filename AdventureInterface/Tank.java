@@ -1,3 +1,3 @@
 public interface Tank {
-    Integer getShield();
+    int getShield();
 }
