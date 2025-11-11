@@ -3,6 +3,10 @@ public class Character {
     private int currentHealt;
     private final String name;
 
+    public Character() {
+        this("",0);
+        this.currentHealt = this.maxHealt;
+    }
     public Character(String name,int maxHealt) {
         this.maxHealt = maxHealt;
         this.name = name;
