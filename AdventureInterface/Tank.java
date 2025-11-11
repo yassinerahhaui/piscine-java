@@ -1,0 +1,3 @@
+interface Tank {
+    Integer getShield();
+}
