@@ -1,25 +1,25 @@
 public class Character {
-    private final int maxHealt;
-    private int currentHealt;
+    private final int maxHealth;
+    private int currentHealth;
     private final String name;
 
     public Character() {
         // this("",0);
-        this.maxHealt = 0;
+        this.maxHealth = 0;
         this.name = ""; 
     }
-    public Character(String name,int maxHealt) {
-        this.maxHealt = maxHealt;
+    public Character(String name,int maxHealth) {
+        this.maxHealth = maxHealth;
         this.name = name;
-        this.currentHealt = maxHealt;
+        this.currentHealth = maxHealth;
     }
 
-    public int getMaxHealt() {
-        return this.maxHealt;
+    public int getMaxHealth() {
+        return this.maxHealth;
     }
 
-    public int getCurrentHealt() {
-        return this.currentHealt;
+    public int getcurrentHealth() {
+        return this.currentHealth;
     }
 
     public String getName() {
@@ -28,16 +28,15 @@ public class Character {
 
     @Override
     public String toString() {
-        if (this.currentHealt == 0)
+        if (this.currentHealth == 0)
             return String.format("%s : KO", this.name);
-        return String.format("%s : %d / %d", this.name, this.currentHealt ,this.maxHealt);
+        return String.format("%s : %d / %d", this.name, this.currentHealth ,this.maxHealth);
     }
 
-    public void takeDamage(int amount) {
-        if (this.currentHealt - amount < 0)
-            this.currentHealt = 0;
-        else
-            this.currentHealt -= currentHealt;
+    public void takeDamage(int damage) {
+        this.currentHealthh -= damage;
+        if (this.currentHealthh < 0)
+            this.currentHealthh = 0;
     }
 
     public void attack(Character ch) {
