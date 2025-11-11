@@ -22,7 +22,7 @@ public class Sorcerer extends Character implements Healer {
     public String toString() {
         if (getCurrentHealth() != 0)
             return String.format("%s is a sorcerer with %d HP. It can heal %d HP.", getName(), getCurrentHealth(), getHealCapacity());
-        return String.format("%s is a dead sorcerer. So bad, it could heal %d HP.", getName(), getCurrentHealth());
+        return String.format("%s is a dead sorcerer. So bad, it could heal %d HP.", getName(), getHealCapacity());
     }
 
 }
