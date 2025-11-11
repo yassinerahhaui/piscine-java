@@ -44,17 +44,19 @@ public class Character {
         ch.takeDamage(9);
     }
 
-    public static void printStatus() {
-        System.out.println("------------------------------------------");
+    public static String printStatus() {
+        String result = "";
+        result += "------------------------------------------\n";
         if (!allCharacters.isEmpty()) {
-            System.out.println("Characters currently fighting :");
+            result += "Characters currently fighting :\n";
             for (Character ch : allCharacters) {
-                System.out.println("- " + ch.toString());
+                result += "- " + ch.toString() + "\n";
             }
         } else {
-            System.out.println("Nobody's fighting right now !");    
+            result += "Nobody's fighting right now !\n";    
         }
-        System.out.println("------------------------------------------");
+        result += "------------------------------------------\n";
+        return result;
     }
 
     public static Character fight(Character first, Character second) {
