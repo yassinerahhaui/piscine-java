@@ -4,8 +4,9 @@ public class Character {
     private final String name;
 
     public Character() {
-        this("",0);
-        this.currentHealt = this.maxHealt;
+        // this("",0);
+        this.maxHealt = 0;
+        this.name = ""; 
     }
     public Character(String name,int maxHealt) {
         this.maxHealt = maxHealt;
