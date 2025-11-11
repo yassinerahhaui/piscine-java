@@ -30,7 +30,7 @@ public class Character {
     public String toString() {
         if (this.currentHealth == 0)
             return String.format("%s : KO", getName());
-        return String.format("%s : %d / %d", getName(), getCurrentHealth() , getMaxHealth());
+        return String.format("%s : %d/%d", getName(), getCurrentHealth() , getMaxHealth());
     }
 
     public void takeDamage(int damage) {
