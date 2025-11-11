@@ -50,7 +50,7 @@ public class Character {
         if (!allCharacters.isEmpty()) {
             result += "Characters currently fighting :\n";
             for (Character ch : allCharacters) {
-                result += "- " + ch.toString() + "\n";
+                result += " - " + ch.toString() + "\n";
             }
         } else {
             result += "Nobody's fighting right now !\n";    
@@ -75,17 +75,5 @@ public class Character {
         return first;
     }
 
-    // public static void main(String[] args) {
-    //     System.out.print(Character.printStatus());
 
-    //     Character aragorn = new Character("Aragorn", 20);
-    //     Character uruk = new Character("Uruk", 15);
-
-    //     System.out.print(Character.printStatus());
-
-    //     Character winner = Character.fight(aragorn, uruk);
-
-    //     System.out.println(winner.toString());
-    //     System.out.print(Character.printStatus());
-    // }
 }
