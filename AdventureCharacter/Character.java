@@ -18,7 +18,7 @@ public class Character {
         return this.maxHealth;
     }
 
-    public int getcurrentHealth() {
+    public int getCurrentHealth() {
         return this.currentHealth;
     }
 
@@ -29,14 +29,14 @@ public class Character {
     @Override
     public String toString() {
         if (this.currentHealth == 0)
-            return String.format("%s : KO", this.name);
-        return String.format("%s : %d / %d", this.name, this.currentHealth ,this.maxHealth);
+            return String.format("%s : KO", getName());
+        return String.format("%s : %d / %d", getName(), getCurrentHealth() , getMaxHealth());
     }
 
     public void takeDamage(int damage) {
-        this.currentHealthh -= damage;
-        if (this.currentHealthh < 0)
-            this.currentHealthh = 0;
+        this.currentHealth -= damage;
+        if (this.currentHealth < 0)
+            this.currentHealth = 0;
     }
 
     public void attack(Character ch) {
