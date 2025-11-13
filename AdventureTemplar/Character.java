@@ -6,7 +6,7 @@ public class Character {
     private final int maxHealth;
     private int currentHealth;
     private final String name;
-    static List<Character> allCharacters = new ArrayList<Character>();
+    private static List<Character> allCharacters = new ArrayList<Character>();
 
     public Character(String name,int maxHealth) {
         this.maxHealth = maxHealth;
