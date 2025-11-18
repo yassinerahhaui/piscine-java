@@ -6,10 +6,12 @@ import java.util.Locale;
 public class ParseDate {
 
     public static LocalDateTime parseIsoFormat(String stringDate) {
+        if (stringDate == null) return null;
         return LocalDateTime.parse(stringDate, DateTimeFormatter.ISO_DATE_TIME);
     }
 
     public static LocalDate parseFullTextFormat(String stringDate) {
+        if (stringDate == null) return null;
         DateTimeFormatter formatter = new DateTimeFormatterBuilder()
                 .parseCaseInsensitive() // <-- accept "monday", "Monday", "MONDAY"
                 .appendPattern("EEEE d MMMM yyyy")
@@ -19,6 +21,7 @@ public class ParseDate {
     }
 
     public static LocalTime parseTimeFormat(String stringDate) {
+        if (stringDate == null) return null;
         String[] parts = stringDate.split("[^0-9]+");
         int hour = Integer.parseInt(parts[0]);
         int minute = Integer.parseInt(parts[1]);
