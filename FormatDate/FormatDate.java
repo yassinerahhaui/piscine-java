@@ -38,9 +38,9 @@ public class FormatDate {
         return time.format(formatter);
     }
 
-    public static void main(String[] args) {
-        System.out.println(formatToFullText(LocalDateTime.of(2021, 8, 22, 13, 25, 46)));
-        System.out.println(formatSimple(LocalDate.of(2022, 2, 13)));
-        System.out.println(formatIso(LocalTime.of(16, 18, 56, 8495847)));
-    }
+    // public static void main(String[] args) {
+    //     System.out.println(formatToFullText(LocalDateTime.of(2021, 8, 22, 13, 25, 46)));
+    //     System.out.println(formatSimple(LocalDate.of(2022, 2, 13)));
+    //     System.out.println(formatIso(LocalTime.of(16, 18, 56, 8495847)));
+    // }
 }
