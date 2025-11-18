@@ -21,7 +21,9 @@ public class FormatDate {
     }
 
     public static String formatSimple(LocalDate date) {
-        if (date == null) return null;
+        if (date == null) {
+            return null;
+        }
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM dd yy", Locale.ITALIAN);
 
         return date.format(formatter);
@@ -32,9 +34,7 @@ public class FormatDate {
             return null;
         }
 
-        // Format: HH:mm:ss.nnnnnnnnn
-        // The sample output shows 9-digit nanoseconds with leading zeros
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss.nnnnnnnnn");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
 
         return time.format(formatter);
     }
